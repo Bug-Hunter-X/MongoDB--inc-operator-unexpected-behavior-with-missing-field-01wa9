@@ -1,0 +1,3 @@
+# MongoDB $inc operator unexpected behavior with missing field
+This repository demonstrates an uncommon error related to the `$inc` operator in MongoDB when dealing with fields that do not exist in the document.  The `$inc` operator is designed to increment numeric fields. However, if the field is missing, it creates the field and sets its value to 1 instead of 0, leading to potential data inconsistencies. 
+The `bug.js` file showcases the problematic code. The `bugSolution.js` file illustrates the correct way to handle this scenario using a combination of `$inc` and `$setOnInsert` operators.
